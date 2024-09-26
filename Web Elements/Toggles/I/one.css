@@ -1,0 +1,115 @@
+:root {
+    --backgroundcol: #16161d;
+}
+
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+img {
+    height: 80px;
+    width: 80px;
+    user-select: none;
+}
+
+#checkbox {
+    visibility: hidden;
+}
+
+label {
+    cursor: pointer;
+}
+
+.radial {
+    z-index: 1;
+}
+
+.radial, .radial-cover {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 10px double var(--backgroundcol);
+    background-color: var(--backgroundcol);
+    position: relative;
+
+}
+
+.radial::before, .radial-cover::before {
+    content: "";
+
+    width: 190px;
+    height: 90px;
+    border-top-left-radius: 95px;
+    border-top-right-radius: 95px;
+    border: none;
+    border-bottom: 0;
+
+    background-color: #fff;
+    position: absolute;
+    top: 20px;
+    left: -47px;
+    transform: rotate(300deg);
+
+}
+
+.sun {
+    position: absolute;
+    top: 15%;
+    left: 5%;
+}
+
+.moon {
+    position: absolute;
+    top: 43%;
+    right: 5%;
+}
+
+.radial-cover {
+    z-index: 2;
+
+   position: absolute;
+   top: 22px;
+   left: 3px;
+   border: none;
+   background-color: #16161d00;
+   
+}
+
+.radial-cover::before {
+    z-index: 2.1;
+    position: absolute;
+    top: 32px;
+    left: -41px;
+    background-color: var(--backgroundcol);
+    opacity: 0;
+    transition: all 0.15s ease-in-out;
+} 
+
+.radial-cover::after {
+    content: "";
+
+    width: 190px;
+    height: 90px;
+    border-top-left-radius: 95px;
+    border-top-right-radius: 95px;
+    border: none;
+    border-bottom: 0;
+
+    background-color: var(--backgroundcol);
+    position: absolute;
+    top: 80px;
+    right: -35px;
+    transform: rotate(120deg);
+    opacity: 0.8;
+    transition: all 0.15s ease-in-out;
+}
+
+#checkbox:checked + label .radial-cover::before {
+    opacity: 0.8;
+}
+
+#checkbox:checked + label .radial-cover::after {
+    opacity: 0;
+}
