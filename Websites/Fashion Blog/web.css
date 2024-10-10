@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Great+Vibes&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* PAGE LAYOUT STYLES  
+-------------------------------------------------------------------*/
+
+p {
+    color: #16161d;
+}
+
+.main {
+    max-width: 2000px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.sidebar {
+    grid-column: 1 / 5;
+}
+
+.main-content {
+    grid-column: 5 / 13;
+}
+
+
+/* HEADER STYLES 
+-------------------------------------------------------------------*/
+
+.header-name {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.header-name h1 {
+    font-family: "Great Vibes", serif;
+}
+
+.title-font, .title-text, h4 {
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.434);
+}
+
+.title-font {
+    color: whitesmoke;
+}
+
+.title-card h3 {
+    font-weight: 500;
+    font-size: 2vh;
+}
+
+.title-card h2 {
+    font-weight: 700;
+    font-size: 3vh;
+}
+
+.header-img {
+    width: 100%;
+    max-width: 2000px;
+    height: auto;
+}
+
+.header-bg {
+    max-width: 2000px;
+}
+
+/* GENERAL STYLES 
+-------------------------------------------------------------------*/
+
+p, h5, span, .tag {
+    font-family: "Montserrat", serif;
+    font-weight: 500;
+}
+
+.icon {
+    width: 25px;
+    height: 25px;
+}
+
+
+.about-img {
+    width: 100%;
+    height: auto;
+}
+
+/* SIDEBAR STYLES 
+-------------------------------------------------------------------*/
+
+.popular-card {
+    display: flex;
+    align-items: center;
+}
+
+.popular-card img {
+    width: 100%;
+    max-width: 75px;
+    height: auto;
+}
+
+.popular-card-in {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 16px;
+}
+
+.tag-box {
+    padding: 10px 1px 10px 1px;
+}
+
+.tag {
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    padding: 4px;
+    border: 1px solid black;
+}
+
+.advert {
+    height: 200px;
+    width: auto;
+    background-color: lightgrey;
+}
+
+/* BLOG POSTS STYLES 
+-------------------------------------------------------------------*/
+
+.blog-post {
+    text-shadow: 1px 1px 2px hsla(0, 0%, 0%, 0.281);
+}
+
+.blog-img {
+    max-width: 600px;
+    height: auto;
+}
+
+/* FOOTER STYLES 
+-------------------------------------------------------------------*/
+
+.footer-bar {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+}
+
+.footer-button {
+    order: -1;
+}
+
+.footer-nav {
+    order: 1;
+}
+
+/* MEDIA SMALL SCREEN MOBILE
+-------------------------------------------------------------------*/
+
+@media only screen and (max-width: 768px) {
+    .sidebar {
+        grid-template-columns: span 12;
+    }
+
+    .main-content {
+        grid-column: span 12;
+    }
+
+    .sidebar {
+        order: 1;
+    }
+
+    .main-content {
+        order: -1;
+    }
+}
