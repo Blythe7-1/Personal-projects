@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.page-box {
+    position: relative;
+    height: 100%;
+    width: 1600px;
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    width: 15rem;
+    height: 100%;
+    background-color: #16161d;
+    overflow: auto;
+
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto 1fr auto;
+}
+
+.logo, .categories, .contact {
+    grid-column: 5 / 13;
+}
+
+.sidebar a {
+    display: block;
+    padding: 8px;
+    color: #fff;
+}
+
+.sidebar a:hover {
+    background-color: #555;
+}
+
+.sidebar a:link {
+    text-decoration: none;
+}
+
+.logo {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    margin-bottom: 5rem;
+    color: #b8860b;
+}
+
+.categories a {
+    font-size: 20px;
+}
+
+.categories a:hover {
+    font-weight: 600;
+}
+
+.contact {
+    padding-bottom: 2rem;
+}
+
+.contact a {
+    font-size: 17px;
+}
+
+
+/* HEADER STYLES 
+-------------------------------------------------------------------------------------*/
+header {
+    margin-left: 15rem;
+    padding: 2rem 1rem 2rem 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-l {
+    margin-left: 3rem;
+}
+
+
+.header-r {
+    margin-right: 3rem;
+    display: flex;
+    align-items: center;
+}
+
+.cart {
+    font-size: 20px;
+}
+
+.cart a:link {
+    text-decoration: none;
+}
+
+.searchbar {
+    display: flex;
+    padding: 5px 12px 5px 12px;
+    border: 1px solid #16161d;
+    border-radius: 16px;
+    margin-right: 2rem;
+}
+
+.input {
+    border: none;
+    background: none;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.input:focus {
+    outline-color: #b8870b57;
+    width: 14rem;
+}
+
+/* MAIN STYLES 
+---------------------------------------------*/
+
+main {
+    margin-left: 15rem;
+}
+
+.main-hero {
+    background-image: url("bgimg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+}
+
+.test {
+    max-height: 1000px;
+    height: 600px;
+    width: 1000px;
+}
+
+/* CONTACT BOX STYLES 
+------------------------------------------------------------*/
+
+.contact-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+}
