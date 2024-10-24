@@ -1,0 +1,121 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    height: 75rem;
+    gap: 2rem;
+    background: linear-gradient(22deg, rgba(238,217,154,1) 0%, rgba(0,0,0,1) 100%);
+    border: none;
+}
+
+.sidebar-element {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 3px solid #16161d;
+    box-shadow: 1px 1px 5px #f1f1f1;
+
+    transition: 0.5s ease;
+}
+
+.image-container img {
+    border-radius: 50%;
+    transition: 0.5s ease;
+}
+
+.text-container {
+    position: absolute;
+    top: 40%;
+    left: 48%;
+    text-align: center;
+    transition: 0.5s ease;
+}
+
+.text-container h3 {
+    font-size: 50px;
+    text-shadow: 1px 1px 3px #f3f3f3;
+}
+
+.hidden-text {
+    position: absolute;
+    top: 18%;
+    left: 18%;
+    opacity: 0;
+    transition: 0.5s ease;
+}
+
+.hidden-text h3 {
+    font-size: 40px;
+    text-shadow: 1px 1px 3px #16161d;
+}
+
+.sidebar-element:hover .image {
+    opacity: 0.3;
+    filter: sepia(80%);
+}
+
+.sidebar-element:hover .text-container {
+    opacity: 0;
+}
+
+.sidebar-element:hover .hidden-text {
+    opacity: 1;
+    color: whitesmoke;
+}
+
+.sidebar-element:hover {
+    border: 3px solid #600000;
+}
+
+/* 
+-----------------------------------*/
+
+.t-two {
+    left: 43%;
+}
+
+.ht-two {
+    left: 28%;
+}
+
+/*  */
+
+.t-three {
+    left: 40%;
+}
+
+.ht-three {
+    left: 26%;
+}
+
+/*  */
+
+.t-four {
+    left: 37%;
+}
+
+.ht-four {
+    top: 23%;
+    left: 4%;
+}
+
+.ht-four h3 {
+    font-size: 33px;
+}
+
+/*  */
+
+.t-five {
+    left: 40%;
+}
+
+.ht-five {
+    left: 5%;
+}
+
+.ht-five h3 {
+    font-size: 38px;
+}
